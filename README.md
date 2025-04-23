@@ -1,4 +1,4 @@
-## Official Website of U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation
+## Bi-level Learning of Task-Specific Decoders for Joint Registration and One-Shot Medical Image Segmentation
 
 <!--
 **yes-ukan/yes-ukan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
