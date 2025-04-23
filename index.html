@@ -211,18 +211,32 @@
 
           <p class="text-left">
             <ul style="list-style-position: inside; text-align: left; margin-left: 0x;">
-              <li>We present the first effort to incorporate the advantage of emerging KANs to improve established U-Net pipeline to be more accurate, efficient and interpretable.</li>
+              <li>We propose a Bi-level optimization-based framework for
+                Joint registration and One-shot Segmentation, termed
+                as Bi-JROS, which precisely characterizes the coupling
+                constraints between decoders specifc to registration and
+                segmentation tasks.</li>
               
               <li>
-                We propose a tokenized KAN block to effectively steer the KAN operators to be compatible with the exiting convolution-based designs.
+                We design an iterative Gradient Response (GR) algo-
+                rithm to tackle the nested bi-level optimization challenge.
+                It leverages the gradient response of the segmentation
+                decoder to the registration decoder during each step of
+                the optimization process, ensuring more effective and
+                stable training compared to simple alternating learning
+                strategy.
               </li>
              
               <li>
-              We empirically validate U-KAN on a wide range of medical segmentation benchmarks, achieving impressive accuracy and efficiency.
+                We propose an Appearance Conformity Constraint
+                (ACC) to avoid the texture gap between target and atlas
+                images and increase the diversity of the data. This is inte-
+                grated into the segmentation task to strengthen the inter-
+                connection between registration and segmentation.
               </li>
-              <li>
+              <!-- <li>
               The application of U-KAN to existing diffusion models as an improved noise predictor demonstrates  its potential in backboning generative tasks and broader vision settings.
-              </li>
+              </li> -->
 
 
             </ul>
@@ -251,9 +265,7 @@
             <br>
             <br>
             <div class="text-left">
-              Overview of U-KAN pipeline. After feature extraction by several convolution stages, the
-              intermediate maps are tokenized and processed by stacked KAN layers. The time embedding is only
-              injected into the KAN blocks when applied for Diffusion U-KAN.
+              Overall framework of the proposed Bi-JROS. (a) demonstrates the pretraining process of the shared encoder, (b) and (c) together constitute the bi-level optimization learning phase and (d) illustrates the mechanism of gradient updating.
             <div>
       </div>
     </div>
@@ -264,7 +276,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Segmentation U-KAN </h2>
+            <h2>Segmentation Bi-JROS </h2>
             <hr style="margin-top:0px">
             <h3 class="new_h3"> Qualitative Results </h3>
             <img src="./pic/seg.jpg" alt="" width="1000" height="500">
